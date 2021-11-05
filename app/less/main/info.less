@@ -1,0 +1,59 @@
+.main {
+    .info {
+        width: 100%;
+        padding: 30px;
+        margin-top: 30px;
+        border-radius: 7px;
+        box-shadow: 3px 4px 18px rgba(0, 0, 0, 0.25);
+
+        .info-title {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-info {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .form-info-label {
+                width: 19.28%;
+                margin-bottom: 21px;
+
+                &:not(:nth-child(4n+4)) {
+                    margin-right: 125px;
+                }
+
+                .custom-select {
+                    height: 46px;
+                }
+
+                .form-info-input {
+                    width: 100%;
+                    padding: 13px 5px;
+                    border: none;
+                    border-bottom: 2px solid #000;
+                    outline: none;
+                }
+            }
+
+            .info_btn {
+                width: 288px;
+                height: 55px;
+                margin: 0 auto;
+                margin-top: 38px;
+                font-size: 22px;
+                font-weight: 500;
+                color: #fff;
+                background-color: #4db952;
+                border: none;
+                border-radius: 7px;
+                outline: none;
+
+                &:active {
+                    transform: translate(2px, 2px);
+                }
+            }
+        }
+    }
+}

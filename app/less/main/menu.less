@@ -1,0 +1,40 @@
+.main {
+    position: relative;
+
+    .menu {
+        position: absolute;
+        width: 20.85%;
+        height: 100vh;
+        padding: 50px 0;
+        padding-left: 56px;
+        background-color: #7085cf;
+        transition: 1s;
+        transform: translateX(-100%);
+
+        .menu_list {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .menu_list-item {
+                margin-bottom: 24px;
+
+                .menu_list-item_link {
+                    font-size: 26px;
+                    font-weight: 500px;
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                &:last-child {
+                    margin-top: auto;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .menu--active {
+        transform: translateX(0%);
+    }
+}

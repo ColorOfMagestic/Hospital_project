@@ -1,0 +1,244 @@
+.main {
+    .cards-ambulatory {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding-top: 23px;
+
+        .patient-card {
+            width: 48.9%;
+            padding: 30px;
+            margin-right: 30px;
+            border-radius: 7px;
+            box-shadow: 3px 4px 18px rgba(0, 0, 0, 0.25);
+
+            .patient-card_top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 32px;
+
+                .search-card {
+                    width: 340px;
+                    height: 50px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #fff;
+                    background-color: @searchCard;
+                    border: none;
+                    border-radius: 7px;
+
+                    &:active {
+                        transform: translate(2px, 2px);
+                    }
+                }
+            }
+
+            .patient-card_form {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 50px;
+
+                .patient-card_form_label {
+                    width: 43%;
+                    margin-bottom: 21px;
+
+                    &:not(:nth-child(even)) {
+                        margin-right: 112px;
+                    }
+
+                    .patient-card_form_input {
+                        width: 100%;
+                        padding: 13px 5px;
+                        border: none;
+                        border-bottom: 2px solid #000;
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .ambulatory_reception-card {
+            width: 48.9%;
+            padding: 30px;
+            border-radius: 7px;
+            box-shadow: 3px 4px 18px rgba(0, 0, 0, 0.25);
+
+            .ambulatory_reception-card_top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-bottom: 33px;
+
+                .reception-card_date {
+                    display: flex;
+                    align-items: center;
+
+                    .reception-card_date_btn {
+                        width: 25px;
+                        height: 25px;
+                        cursor: pointer;
+                        background-color: transparent;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        border: none;
+                        border-radius: 7px;
+                    }
+
+                    .reception-card_date--prev {
+                        background-image: url(../img/arrow_left.png);
+                    }
+
+                    .reception-card_date--next {
+                        background-image: url(../img/arrow_right.png);
+                    }
+
+                    .reception-card_date-span {
+                        font-size: 25px;
+                        color: @date;
+                    }
+
+                    img {
+                        margin-left: 25px;
+                    }
+                }
+            }
+
+            .ambulatory_reception-card_content {
+                display: flex;
+
+                .ambulatory_content-form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 36%;
+
+                    .ambulatory_content-input {
+                        width: 100%;
+                        height: 63px;
+                        margin-top: 37px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #fff;
+                        cursor: pointer;
+                        background-color: #3cb541;
+                        border: none;
+                        border-radius: 7px;
+                        outline: none;
+
+                        &:active {
+                            transform: translate(2px, 2px);
+                        }
+                    }
+                }
+
+                .calendar {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 15px;
+                    margin-left: 60px;
+
+                    .week-day-name,
+                    .week {
+                        display: flex;
+                        flex-direction: row;
+
+                        .day {
+                            width: 63px;
+                            height: 53px;
+                            border: 1px solid #000;
+
+                            &:not(:last-child) {
+                                margin-right: 5px;
+                            }
+
+                            .day-span {
+                                display: block;
+                                padding: 8px 5px;
+                                text-align: end;
+                            }
+
+                            .day-span--weekend {
+                                color: #bc3232;
+                            }
+                        }
+
+                        .noDayInMonth {
+                            color: #cacaca;
+                            border-color: #cacaca;
+                        }
+
+                        .day-name {
+                            height: 14px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            border: none;
+                        }
+                    }
+
+                    .week-day-name {
+                        margin-bottom: 7px;
+                    }
+
+                    .week {
+                        margin-bottom: 5px;
+                    }
+
+                    .current-day_table-wrapper {
+                        position: relative;
+                        display: none;
+                        height: 63px;
+
+                        .current-day_table {
+                            position: absolute;
+                            width: 100%;
+                            border-collapse: collapse;
+                            background-color: rgba(115, 137, 216, 0.23);
+                            border: 1px solid #000;
+                            opacity: 0;
+                            transition-delay: 1s;
+                            transition-duration: 0.8s;
+
+                            tr {
+                                td {
+                                    font-size: 12px;
+                                    line-height: 10px;
+                                    text-align: center;
+                                    border-bottom: 1px solid #000;
+                                }
+
+                                .right {
+                                    width: 90px;
+                                    padding-top: 16px;
+                                    padding-right: 12px;
+                                    padding-bottom: 16px;
+                                    padding-left: 12px;
+                                    font-size: 16px;
+                                    text-align: center;
+                                    border-right: 1px solid #000;
+
+                                    span {
+                                        display: block;
+                                        margin-top: 5px;
+                                    }
+                                }
+                            }
+                        }
+                        // display: none;
+                    }
+
+                    .current-day_table-wrapper--active {
+                        display: block;
+
+                        .current-day_table {
+                            opacity: 1;
+                            transition-delay: 1s;
+                            transition-duration: 0.8s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
