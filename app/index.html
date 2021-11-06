@@ -228,10 +228,10 @@
       </div>
       <!-- end ambulatory -->
       <!-- history -->
-      <div class="cards-history" style="display: none">
+      <div class="cards-history">
         <div class="patient-card history_patient-card">
           <div class="patient-card_top">
-            <h2 class="patient-card_title">Карточка пациента </h2>
+            <h2 class="title patient-card_title">Карточка пациента </h2>
             <button class="search-card">Найти карточку пациента </button>
           </div>
           <form class="patient-card_form" action="">
@@ -277,20 +277,18 @@
           </form>
         </div>
         <div class="history_reception-card">
-          <div class="reception-card_top">
-            <h2 class="reception-card_title">Карточка приёма</h2>
+          <div class="reception-card_top history_reception-card_top">
+            <h2 class="title reception-card_title">Карточка приёма</h2>
             <div class="reception-card_date">
-              <button class="reception-card_date reception-card_date--prev"><img src="img/arrow_left.png"
-                  alt="Влево"></button>
+              <button class="reception-card_date_btn reception-card_date--prev"></button>
               <span class="reception-card_date-span">12-18.07.2021</span>
-              <button class="reception-card_date reception-card_date--next"><img src="img/arrow_right.png"
-                  alt="Вправо"></button>
+              <button class="reception-card_date_btn reception-card_date--next"></button>
               <img src="img/calendar.png" alt="Календарь">
             </div>
           </div>
           <div class="tabs-wrapper">
-            <input class="tabs_input" type="radio" name="tabs" id="tab_1" checked>
-            <input class="tabs_input" type="radio" name="tabs" id="tab_2">
+            <input class="tabs_input" type="radio" name="tabs" id="tab_1">
+            <input class="tabs_input" type="radio" name="tabs" id="tab_2" checked>
             <input class="tabs_input" type="radio" name="tabs" id="tab_3">
             <input class="tabs_input" type="radio" name="tabs" id="tab_4">
             <input class="tabs_input" type="radio" name="tabs" id="tab_5">
@@ -316,49 +314,49 @@
                 <tr>
                   <td>1845</td>
                   <td>19.06.2021</td>
-                  <td>Приём у кардиолога </td>
+                  <td class="text-left">Приём у кардиолога </td>
                   <td>Воронцова А.О</td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
                 <tr>
                   <td>1846</td>
                   <td>20.05.2021</td>
-                  <td>Приём у гастроэнтеролога</td>
+                  <td class="text-left">Приём у гастроэнтеролога</td>
                   <td>Жуковский Я.О. </td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
                 <tr>
                   <td>1847</td>
                   <td>19.01.2021</td>
-                  <td>Сдача анализов</td>
+                  <td class="text-left">Сдача анализов</td>
                   <td>Дидко П.В. </td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
                 <tr>
                   <td>875</td>
                   <td>19.01.2021</td>
-                  <td>Флюрограграфия</td>
+                  <td class="text-left">Флюрограграфия</td>
                   <td>Петров П.П.</td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
                 <tr>
                   <td>875</td>
                   <td>26.06.2020</td>
-                  <td>Флюрограграфия</td>
+                  <td class="text-left">Флюрограграфия</td>
                   <td>Петров П.П.</td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
-                <tr>
+                <tr class="pagination">
                   <td colspan="5">
                     <div class="table_pagination">
-                      <button class="pagination-btn btn-prev--all"><img src="img/prev_all.png" alt=""></button>
-                      <button class="pagination-btn btn-prev"><img src="img/prev.png" alt=""></button>
+                      <button class="pagination-btn btn-prev--all"></button>
+                      <button class="pagination-btn btn-prev"></button>
                       <a class="pagination-link" href="#">1</a>
                       <a class="pagination-link" href="#">2</a>
                       <a class="pagination-link" href="#">3</a>
                       <a class="pagination-link" href="#">4</a>
-                      <button class="pagination-btn btn-next"><img src="img/next.png" alt=""></button>
-                      <button class="pagination-btn btn-next--all"><img src="img/next_all.png" alt=""></button>
+                      <button class="pagination-btn btn-next"></button>
+                      <button class="pagination-btn btn-next--all"></button>
 
                       <select class="pagination-select" name="paginationSelect" id="">
                         <option value="5">5</option>
@@ -396,9 +394,10 @@
                   <td>12.11.2021</td>
                   <td>Врач - кардиолог</td>
                   <td>Воронцова А.О</td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex top">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
@@ -407,9 +406,10 @@
                   <td>05.12.2021</td>
                   <td>Врач - терапевт</td>
                   <td>Жуковский Я.О</td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
@@ -418,9 +418,10 @@
                   <td>05.09.2021</td>
                   <td>Врач - стоматолог</td>
                   <td>Петров П.П. </td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
@@ -429,9 +430,10 @@
                   <td>15.09.2021</td>
                   <td>Врач - терапевт</td>
                   <td>Жуковский Я.О</td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
@@ -440,14 +442,15 @@
                   <td>03.08.2021</td>
                   <td>Врач - алерголог</td>
                   <td>Дидко П.В. </td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex bottom">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
-                <tr>
-                  <td colspan="5">
+                <tr class="pagination">
+                  <td colspan="6">
                     <div class="table_pagination">
                       <button class="pagination-btn btn-prev--all"><img src="img/prev_all.png" alt=""></button>
                       <button class="pagination-btn btn-prev"><img src="img/prev.png" alt=""></button>
@@ -474,7 +477,7 @@
               </table>
             </div>
             <div class="content content_in_home">
-              <table class="table-in_home">
+              <table class="table-content_in_home">
                 <col class="number">
                 <col class="date">
                 <col class="specialization">
@@ -494,9 +497,10 @@
                   <td>12.11.2021</td>
                   <td>Врач - кардиолог</td>
                   <td>Воронцова А.О</td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex top">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
@@ -505,9 +509,10 @@
                   <td>05.12.2021</td>
                   <td>Врач - терапевт</td>
                   <td>Жуковский Я.О</td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
@@ -516,9 +521,10 @@
                   <td>05.09.2021</td>
                   <td>Врач - стоматолог</td>
                   <td>Петров П.П. </td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
@@ -527,9 +533,10 @@
                   <td>15.09.2021</td>
                   <td>Врач - терапевт</td>
                   <td>Жуковский Я.О</td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
@@ -538,14 +545,15 @@
                   <td>03.08.2021</td>
                   <td>Врач - алерголог</td>
                   <td>Дидко П.В. </td>
-                  <td>
-                    <button class="write"><img src="img/write.png" alt="Записать"></button>
-                    <button class="write"><img src="img/delete.png" alt="Удалить"></button>
+                  <td class="flex bottom">
+                    <button class="write-btn write-btn--write"></button>
+                    <span class="partition"></span>
+                    <button class="write-btn write-btn--delete"></button>
                   </td>
                   <td><img src="img/no.png" alt="Нет"></td>
                 </tr>
-                <tr>
-                  <td colspan="5">
+                <tr class="pagination">
+                  <td colspan="6">
                     <div class="table_pagination">
                       <button class="pagination-btn btn-prev--all"><img src="img/prev_all.png" alt=""></button>
                       <button class="pagination-btn btn-prev"><img src="img/prev.png" alt=""></button>
@@ -611,7 +619,7 @@
                   <td>Пупкина З.Л.</td>
                   <td>Уточнить вопрос по приёму</td>
                   <td><img src="img/Star.png" alt="Важно"></td>
-                  <td><button class="btn-voice"><img src="img/voice.png" alt="Звук"></button></td>
+                  <td><button class="btn-voice"></button></td>
                 </tr>
                 <!-- 2 -->
                 <tr>
@@ -629,7 +637,7 @@
                   <td>Пупкина З.Л.</td>
                   <td>Запись на приём ...</td>
                   <td></td>
-                  <td><button class="btn-voice"><img src="img/voice.png" alt="Звук"></button></td>
+                  <td><button class="btn-voice"></button></td>
                 </tr>
                 <!-- 3 -->
                 <tr>
@@ -647,7 +655,7 @@
                   <td>Пупкина З.Л.</td>
                   <td>Вызов врача на дом</td>
                   <td><img src="img/Star.png" alt="Важно"></td>
-                  <td><button class="btn-voice"><img src="img/voice.png" alt="Звук"></button></td>
+                  <td><button class="btn-voice"></button></td>
                 </tr>
                 <!-- 4 -->
                 <tr>
@@ -665,7 +673,7 @@
                   <td>Пупкина З.Л.</td>
                   <td>Вызов врача на дом</td>
                   <td><img src="img/Star.png" alt="Важно"></td>
-                  <td><button class="btn-voice"><img src="img/voice.png" alt="Звук"></button></td>
+                  <td><button class="btn-voice"></button></td>
                 </tr>
                 <!-- 5 -->
                 <tr>
@@ -683,10 +691,10 @@
                   <td>Пупкина З.Л.</td>
                   <td>Уточнить вопрос по приёму</td>
                   <td></td>
-                  <td><button class="btn-voice"><img src="img/voice.png" alt="Звук"></button></td>
+                  <td><button class="btn-voice"></button></td>
                 </tr>
-                <tr>
-                  <td colspan="5">
+                <tr class="pagination">
+                  <td colspan="9">
                     <div class="table_pagination">
                       <button class="pagination-btn btn-prev--all"><img src="img/prev_all.png" alt=""></button>
                       <button class="pagination-btn btn-prev"><img src="img/prev.png" alt=""></button>
@@ -708,8 +716,6 @@
                     </div>
                   </td>
                 </tr>
-
-
               </table>
             </div>
             <div class="content content_other">
@@ -761,7 +767,7 @@
                   <td>Петров П.П.</td>
                   <td><img src="img/ok.png" alt="Да"></td>
                 </tr>
-                <tr>
+                <tr class="pagination">
                   <td colspan="5">
                     <div class="table_pagination">
                       <button class="pagination-btn btn-prev--all"><img src="img/prev_all.png" alt=""></button>
