@@ -1,1 +1,235 @@
+.modal {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 1.2s;
 
+    .modal-wrapper {
+        position: relative;
+        width: 1582px;
+        min-height: 814px;
+        padding: 20px 26px;
+        background-color: #fff;
+        border: 1px solid #343434;
+        border-radius: 7px;
+
+        .modal-content {
+            .modal_form {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 8px;
+
+                .modal_form_label {
+                    width: 340px;
+
+                    &:not(:nth-child(4n+4)) {
+                        margin-right: 55px;
+                    }
+
+                    .modal_form_input {
+                        width: 100%;
+                        padding: 37px 5px 12px;
+                        border: none;
+                        border-bottom: 2px solid #000;
+                        outline: none;
+                    }
+                }
+
+                .modal_search-card {
+                    width: 328px;
+                    height: 50px;
+                    margin-top: 40px;
+                    margin-left: auto;
+                    font-weight: 500;
+                    color: #fff;
+                    background-color: @searchCard;
+                    border: none;
+                    border-radius: 7px;
+
+                    &:active {
+                        transform: translate(2px, 2px);
+                    }
+                }
+            }
+
+            .modal-table {
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+                border-collapse: collapse;
+                border: 2px solid #343434;
+
+                tr {
+                    td {
+                        height: 60px;
+                        border: 1px solid #000;
+                    }
+
+                    .text-left {
+                        padding-left: 18px;
+                        text-align: left;
+                    }
+                }
+
+                .active {
+                    background-color: rgba(112, 133, 207, 0.2);
+                }
+
+                .number {
+                    width: 90px;
+                }
+
+                .secondName {
+                    width: 224px;
+                }
+
+                .firstName {
+                    width: 205px;
+                }
+
+                .father {
+                    width: 180px;
+                }
+
+                .birthday {
+                    width: 120px;
+                }
+
+                .passport {
+                    width: 180px;
+                }
+
+                .social {
+                    width: 191px;
+                }
+
+                .OMS {
+                    width: 196px;
+                }
+
+                .pagination {
+                    td {
+                        height: 37px;
+
+                        .table_pagination {
+                            display: flex;
+                            align-items: center;
+                            padding: 0 25px;
+                            font-size: 10px;
+                            line-height: 21px;
+                            color: #5a5a5a;
+
+                            .pagination-btn {
+                                width: 10px;
+                                height: 20px;
+                                cursor: pointer;
+                                background-color: transparent;
+                                background-repeat: no-repeat;
+                                background-position: 50% 50%;
+                                border: none;
+                            }
+
+                            .btn-prev--all {
+                                background-image: url(../img/prev_all.png);
+                            }
+
+                            .btn-prev {
+                                background-image: url(../img/prev.png);
+                            }
+
+                            .btn-next--all {
+                                background-image: url(../img/next_all.png);
+                            }
+
+                            .btn-next {
+                                background-image: url(../img/next.png);
+                            }
+
+                            .pagination-link {
+                                color: #5a5a5a;
+                                text-decoration: none;
+
+                                &:not(:last-child) {
+                                    margin-right: 2px;
+                                }
+                            }
+
+                            .pagination-select {
+                                width: 32px;
+                                margin-left: 5px;
+                                font-size: 10px;
+                                background: transparent;
+                                border: 1px solid #5a5a5a;
+                            }
+
+                            .pagination-label {
+                                margin-left: 7px;
+                            }
+
+                            .pagination-span {
+                                margin-left: auto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .modal-buttons_wrapper {
+                display: flex;
+                margin-top: 20px;
+
+                .add-new {
+                    width: 328px;
+                    height: 50px;
+                    font-weight: 500;
+                    color: #fff;
+                    background-color: @searchCard;
+                    border: none;
+                    border-radius: 7px;
+
+                    &:active {
+                        transform: translate(2px, 2px);
+                    }
+                }
+
+                .buttons-choose {
+                    margin-left: auto;
+
+                    .btn-choose {
+                        width: 167px;
+                        height: 44px;
+                        font-weight: 500;
+                        color: #fff;
+                        background-color: @searchCard;
+                        border: none;
+                        border-radius: 7px;
+
+                        &:active {
+                            transform: translate(2px, 2px);
+                        }
+                    }
+
+                    .btn-choose-cancel {
+                        margin-left: 21px;
+                        background-color: @cancel;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal--active {
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    transition: 1.2s;
+}
