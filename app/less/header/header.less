@@ -9,7 +9,8 @@
 
         .logo {
             display: flex;
-            margin-top: 53px;
+            align-items: center;
+            margin-top: 40px;
             margin-right: auto;
 
             .logo_name {
@@ -21,7 +22,6 @@
 
                 .toggler {
                     position: relative;
-                    top: -10px;
                     width: 68px;
                     height: 32px;
                     -webkit-appearance: none;
@@ -49,6 +49,31 @@
                         left: 40px;
                     }
                 }
+            }
+
+            .logo-btn {
+                width: 35px;
+                height: 35px;
+                margin-left: 14px;
+                cursor: pointer;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: contain;
+                border: none;
+            }
+
+            .logo-btn_enter {
+                margin-left: 28px;
+                background-image: url(../img/enter.png);
+            }
+
+            .logo-btn_add-emp {
+                background-image: url(../img/plus.png);
+            }
+
+            .logo-btn_save {
+                background-image: url(../img/save.png);
             }
         }
 

@@ -1,0 +1,427 @@
+.main {
+    .data-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 50px 0;
+        margin-bottom: 10px;
+
+        .data-emp,
+        .data-time {
+            width: 41.5%;
+
+            .data-form {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .data-label {
+                    width: 44.67%;
+                    margin-bottom: 27px;
+
+                    &:nth-child(odd) {
+                        margin-right: 77px;
+                    }
+
+                    .data-input {
+                        width: 100%;
+                        padding: 5px 5px 22px;
+                        font-size: 16px;
+                        border: none;
+                        border-bottom: 2px solid #000;
+                        outline: none;
+                    }
+
+                    .custom-select {
+                        height: 47px;
+                        font-size: 16px;
+                    }
+                }
+
+                .data-time_label--flex {
+                    display: flex;
+                    align-items: center;
+
+                    .data-time_label--short {
+                        display: block;
+                        width: 50%;
+                    }
+
+                    .data-time_label--short_2 {
+                        width: 32%;
+                        margin-left: auto;
+
+                        .data-input--checkbox {
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .data-label--date {
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        top: 0%;
+                        right: 0%;
+                        content: url(../img/calendar.png);
+                    }
+                }
+            }
+        }
+
+        .data-time {
+            .data-time_bet {
+                margin-top: 22px;
+
+                .data-time_bet-title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 18px;
+                }
+
+                .bet_add-bet_wrapper {
+                    display: flex;
+                    align-items: center;
+                    margin: 15px 0;
+
+                    .add-bet {
+                        width: 29px;
+                        height: 29px;
+                        cursor: pointer;
+                        background-color: #6587ff;
+                        background-image: url(../img/add_bet.png);
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        border: none;
+                        border-radius: 50%;
+
+                        &:active {
+                            transform: translate(2px, 2px);
+                        }
+                    }
+
+                    .add-bet_descr {
+                        margin-left: 14px;
+                        font-size: 16px;
+                    }
+                }
+
+                .add-bet_table {
+                    width: 100%;
+                    text-align: center;
+                    border-collapse: collapse;
+                    border: 1px solid #e1e1e1;
+
+                    .post {
+                        width: 43.6%;
+                    }
+
+                    .bet {
+                        width: 37.3%;
+                    }
+
+                    .delite {
+                        width: 17.7%;
+                    }
+
+                    tr {
+                        height: 75px;
+
+                        td {
+                            border: 1px solid #e1e1e1;
+                        }
+
+                        .border--dark {
+                            border-right: 1px solid #c1c1c1;
+                        }
+                    }
+
+                    .add-bet_table-title {
+                        height: 43px;
+                        background-color: #dfe4f6;
+                    }
+                }
+            }
+        }
+    }
+
+    .data_tabs-wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+
+        .data_tabs_input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .content {
+            display: none;
+            width: 100%;
+
+            .content-table {
+                width: 100%;
+                font-size: 16px;
+                text-align: center;
+                border-collapse: collapse;
+                border: 2px solid #000;
+
+                tr {
+                    height: 56px;
+
+                    td {
+                        padding: 10px;
+                        border: 1px solid #000;
+
+                        img {
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                .heading {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .content_contact {
+            .table-contact {
+                .number {
+                    width: 3.6%;
+                }
+
+                .comm {
+                    width: 23%;
+                }
+
+                .data-cont {
+                    width: 23.8%;
+                }
+
+                .is-active {
+                    width: 11%;
+                }
+
+                .tools {
+                    width: 7%;
+                }
+
+                .tools_2 {
+                    width: 7%;
+                }
+
+                .creator {
+                    width: 15.25%;
+                }
+
+                .create-date {
+                    width: 9.1%;
+                }
+            }
+        }
+
+        .content_education {
+            .table-education {
+                .number {
+                    width: 3.6%;
+                }
+
+                .type {
+                    width: 8%;
+                }
+
+                .institut {
+                    width: 23.4%;
+                }
+
+                .specialization {
+                    width: 16.85%;
+                }
+
+                .accept-date {
+                    width: 8.7%;
+                }
+
+                .dismissal-date {
+                    width: 8.7%;
+                }
+
+                .tools {
+                    width: 5.1%;
+                }
+
+                .tools_2 {
+                    width: 5.1%;
+                }
+
+                .creator {
+                    width: 11.44%;
+                }
+
+                .create-date {
+                    width: 9.1%;
+                }
+            }
+        }
+
+        .content_file {
+            .table-content_file {
+                .number {
+                    width: 3.6%;
+                }
+
+                .file-name {
+                    width: 24.1%;
+                }
+
+                .descroption {
+                    width: 30.2%;
+                }
+
+                .document {
+                    width: 11.3%;
+                }
+
+                .tools {
+                    width: 5.1%;
+                }
+
+                .tools_2 {
+                    width: 5.1%;
+                }
+
+                .creator {
+                    width: 11.44%;
+                }
+
+                .create-date {
+                    width: 9.1%;
+                }
+            }
+        }
+
+        .content_experience {
+            .table-content_experience {
+                .number {
+                    width: 3.6%;
+                }
+
+                .organizaition {
+                    width: 15%;
+                }
+
+                .city {
+                    width: 11.5%;
+                }
+
+                .bet {
+                    width: 7.2%;
+                }
+
+                .post {
+                    width: 14.5%;
+                }
+
+                .accept-date {
+                    width: 8.7%;
+                }
+
+                .dismissal-date {
+                    width: 8.7%;
+                }
+
+                .tools {
+                    width: 5.1%;
+                }
+
+                .tools_2 {
+                    width: 5.1%;
+                }
+
+                .creator {
+                    width: 11.44%;
+                }
+
+                .create-date {
+                    width: 9.1%;
+                }
+            }
+        }
+
+        .content_encourage {
+            .table-content_encourage {
+                .number {
+                    width: 3.6%;
+                }
+
+                .type {
+                    width: 10.1%;
+                }
+
+                .reason {
+                    width: 23.6%;
+                }
+
+                .work {
+                    width: 20.55%;
+                }
+
+                .implement {
+                    width: 11.3%;
+                }
+
+                .tools {
+                    width: 5.1%;
+                }
+
+                .tools_2 {
+                    width: 5.1%;
+                }
+
+                .creator {
+                    width: 11.44%;
+                }
+
+                .create-date {
+                    width: 9.1%;
+                }
+            }
+        }
+
+        .data_label-tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 175px;
+            height: 43px;
+            margin-right: 15px;
+            font-size: 14px;
+            border-radius: 3px;
+            box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.25);
+        }
+
+        #data_tab_1:checked ~ label[for='data_tab_1'],
+        #data_tab_2:checked ~ label[for='data_tab_2'],
+        #data_tab_3:checked ~ label[for='data_tab_3'],
+        #data_tab_4:checked ~ label[for='data_tab_4'],
+        #data_tab_5:checked ~ label[for='data_tab_5'] {
+            color: #fff;
+            background-color: rgba(162, 81, 197, 0.82);
+        }
+
+        #data_tab_1:checked ~ .content_contact,
+        #data_tab_2:checked ~ .content_education,
+        #data_tab_3:checked ~ .content_file,
+        #data_tab_4:checked ~ .content_experience,
+        #data_tab_5:checked ~ .content_encourage {
+            display: block;
+        }
+    }
+}
