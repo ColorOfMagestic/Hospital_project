@@ -1,8 +1,7 @@
 .main {
     .cards-home {
         position: relative;
-        // display: none;
-        display: flex;
+        display: none;
         align-items: stretch;
         justify-content: space-between;
         padding-top: 23px;
@@ -154,6 +153,8 @@
             background-position: 50% 50%;
             background-size: contain;
             border: none;
+            opacity: 0;
+            transition: all ease-in-out 0.8s;
             transform: translate(-50%, -50%);
         }
 
@@ -162,8 +163,138 @@
         }
 
         .data-btn--dataOut {
-            display: none;
             background-image: url(../img/arrow-r_home.png);
+        }
+
+        .data-btn--active {
+            z-index: 3;
+            opacity: 1;
+        }
+    }
+
+    .cards-home--active {
+        display: flex;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .main {
+        .cards-home {
+            .patient-card {
+                .patient-card_top {
+                    margin-bottom: 0;
+
+                    .search-card {
+                        width: 45%;
+                        font-size: 14px;
+                    }
+                }
+
+                .patient-card_form {
+                    margin-bottom: 10px;
+
+                    .custom-select {
+                        height: 35px;
+                    }
+
+                    .patient-card_form_label {
+                        width: 43%;
+                        margin-bottom: 10px;
+
+                        &:not(:nth-child(even)) {
+                            margin-right: 70px;
+                        }
+
+                        .patient-card_form_input {
+                            padding: 10px 5px 5px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .home_reception-card {
+                width: 48.9%;
+                padding: 30px;
+                .border();
+
+                .patient-card_top {
+                    margin-bottom: 0;
+
+                    .search-card {
+                        width: 45%;
+                        font-size: 14px;
+                    }
+                }
+
+                .patient-card_form {
+                    margin-bottom: 10px;
+
+                    .patient-card_form_label {
+                        width: 43%;
+                        margin-bottom: 10px;
+
+                        &:not(:nth-child(even)) {
+                            margin-right: 70px;
+                        }
+
+                        .patient-card_form_input {
+                            padding: 10px 5px 5px;
+                            font-size: 14px;
+                        }
+
+                        .patient-card_form_input--small {
+                            width: 20%;
+
+                            &:not(:last-child) {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .short {
+                            width: 15%;
+                        }
+
+                        .long {
+                            width: 30%;
+                        }
+                    }
+
+                    .patient-card_form_textarea {
+                        height: 100px;
+                    }
+                }
+            }
+
+            .data-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 90px;
+                height: 150px;
+                cursor: pointer;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: contain;
+                border: none;
+                opacity: 0;
+                transition: all ease-in-out 0.8s;
+                transform: translate(-50%, -50%);
+            }
+
+            .data-btn--dataIn {
+                background-image: url(../img/arrow-l_home.png);
+            }
+
+            .data-btn--dataOut {
+                background-image: url(../img/arrow-r_home.png);
+            }
+
+            .data-btn--active {
+                z-index: 3;
+                opacity: 1;
+            }
         }
     }
 }

@@ -1,7 +1,6 @@
 .main {
     .cards-history {
-        // display: none;
-        display: flex;
+        display: none;
         align-items: stretch;
         justify-content: space-between;
         padding-top: 23px;
@@ -536,9 +535,26 @@
                                 height: 60px;
                                 border: 2px solid #343434;
 
-                                img {
-                                    display: block;
-                                    margin: 0 auto;
+                                .btn-important {
+                                    width: 25px;
+                                    height: 25px;
+                                    margin: auto;
+                                    cursor: pointer;
+                                    background-color: transparent;
+                                    background-repeat: no-repeat;
+                                    background-position: 50% 50%;
+                                    border: none;
+
+                                    svg {
+                                        fill: none;
+                                    }
+                                }
+
+                                .btn-important--active {
+                                    svg {
+                                        fill: #f3d744;
+                                        stroke: #bfa623;
+                                    }
                                 }
 
                                 .btn-voice {
@@ -816,6 +832,70 @@
                 #tab_4:checked ~ .content_calls,
                 #tab_5:checked ~ .content_other {
                     display: block;
+                }
+            }
+        }
+    }
+
+    .active {
+        display: flex;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .main {
+        .cards-history {
+            .patient-card {
+                .patient-card_top {
+                    .search-card {
+                        width: 45%;
+                        font-size: 14px;
+                    }
+                }
+
+                .patient-card_form {
+                    margin-bottom: 10px;
+
+                    .patient-card_form_label {
+                        width: 43%;
+                        margin-bottom: 10px;
+
+                        &:not(:nth-child(even)) {
+                            margin-right: 70px;
+                        }
+
+                        .patient-card_form_input {
+                            padding: 10px 5px 5px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .history_reception-card {
+                .history_reception-card_top {
+                    .reception-card_date {
+                        .reception-card_date-span {
+                            font-size: 20px;
+                        }
+
+                        img {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+
+                .tabs-wrapper {
+                    .content {
+                        .table-history {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .label-tab {
+                        width: 95px;
+                        font-size: 12px;
+                    }
                 }
             }
         }

@@ -152,6 +152,7 @@
         position: relative;
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 70px;
 
         .data_tabs_input {
             position: absolute;
@@ -413,7 +414,7 @@
         #data_tab_4:checked ~ label[for='data_tab_4'],
         #data_tab_5:checked ~ label[for='data_tab_5'] {
             color: #fff;
-            background-color: rgba(162, 81, 197, 0.82);
+            background-color: #7389d8;
         }
 
         #data_tab_1:checked ~ .content_contact,
@@ -422,6 +423,81 @@
         #data_tab_4:checked ~ .content_experience,
         #data_tab_5:checked ~ .content_encourage {
             display: block;
+        }
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .main {
+        .data-wrapper {
+            .data-emp,
+            .data-time {
+                width: 48.5%;
+
+                .data-form {
+                    .data-label {
+                        width: 44.67%;
+                        margin-bottom: 10px;
+
+                        &:nth-child(odd) {
+                            margin-right: 50px;
+                        }
+
+                        .data-input {
+                            width: 100%;
+                            padding: 10px 5px 5px;
+                            font-size: 14px;
+                        }
+
+                        .custom-select {
+                            height: 35px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .data-time_label--flex {
+                        display: flex;
+                        align-items: center;
+
+                        .data-time_label--short {
+                            display: block;
+                            width: 50%;
+                        }
+
+                        .data-label--date {
+                            &::after {
+                                right: -5%;
+                            }
+                        }
+
+                        .data-time_label--short_2 {
+                            width: 40%;
+                            margin-left: auto;
+
+                            .data-input--checkbox {
+                                width: 16px;
+                                height: 16px;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    .data-label--date {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            top: 0%;
+                            right: 0%;
+                            content: url(../img/calendar.png);
+                        }
+                    }
+                }
+            }
+        }
+
+        .data_tabs-wrapper {
+            margin-bottom: 50px;
         }
     }
 }

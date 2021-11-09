@@ -1,0 +1,372 @@
+.modal-employee {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 1.2s;
+
+    .modal-wrapper {
+        position: relative;
+        padding: 40px;
+        background-color: #fff;
+        border: 1px solid #343434;
+        border-radius: 7px;
+
+        .modal-content {
+            .modal-title {
+                font-size: 26px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .modal-text {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .modal-form {
+                width: 100%;
+
+                .custom-select {
+                    height: 56px;
+                }
+
+                .modal-textarea {
+                    width: 100%;
+                    height: 87px;
+                    padding: 12px 17px;
+                    resize: none;
+                    border: 2px solid #000;
+                    outline: none;
+                }
+
+                .modal-label {
+                    width: 100%;
+
+                    .modal-input {
+                        width: 100%;
+                        padding: 13px 5px;
+                        font-size: 14px;
+                        border: none;
+                        border-bottom: 2px solid #000;
+                        outline: none;
+                    }
+                }
+            }
+
+            .modal-buttons-choose {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn-choose {
+                    width: 206px;
+                    height: 58px;
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: #fff;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 7px;
+
+                    &:active {
+                        transform: translate(2px, 2px);
+                    }
+                }
+
+                .btn-choose-cancel {
+                    margin-right: 33px;
+                    background-color: @cancel;
+                }
+
+                .btn-choose-ok {
+                    background-color: @appointment;
+                }
+            }
+        }
+    }
+
+    .modal-dismissal-wrapper {
+        width: 36.35%;
+        min-height: 328px;
+
+        .modal-dismissal-content {
+            .modal-dismissal-title {
+                margin-top: 51px;
+            }
+
+            .modal-dismissal-text {
+                margin-top: 37px;
+            }
+
+            .modal-dismissal-buttons-choose {
+                margin-top: 63px;
+            }
+        }
+    }
+
+    .modal-dismissal--confirm-wrapper {
+        width: 36.35%;
+        min-height: 328px;
+
+        .modal-dismissal--confirm-content {
+            .modal-dismissal--confirm-title {
+                margin-top: 51px;
+            }
+
+            .modal-dismissal--confirm-text {
+                width: 70%;
+                margin: 0 auto;
+                margin-top: 37px;
+            }
+
+            .modal-dismissal--confirm-buttons-choose {
+                margin-top: 63px;
+            }
+        }
+    }
+
+    .modal-redaction-data-wrapper {
+        width: 28.65%;
+        min-height: 487px;
+
+        .modal-redaction-data-content {
+            .modal-redaction-data-title {
+                margin-top: 25px;
+            }
+
+            .modal-redaction-data-text {
+                margin-top: 30px;
+            }
+
+            .modal-redaction-data-form {
+                margin-bottom: 47px;
+
+                .select-discription {
+                    margin-top: 5px;
+                    resize: 12px;
+                }
+
+                .modal-redaction-data-form-text {
+                    margin-top: 36px;
+                }
+            }
+        }
+    }
+
+    .modal-redaction-education-wrapper {
+        width: 28.65%;
+        min-height: 487px;
+
+        .modal-redaction-education-content {
+            .modal-redaction-education-title {
+                margin-top: 13px;
+                margin-bottom: 40px;
+            }
+
+            .modal-redaction-education-form {
+                margin-bottom: 47px;
+
+                .modal-redaction-education-textarea {
+                    margin: 30px 0 10px;
+                }
+
+                .modal-redaction-education-text {
+                    margin-top: 33px;
+                    margin-bottom: 8px;
+                    text-align: left;
+                }
+
+                .modal-redaction-education-period {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    .period-label {
+                        display: flex;
+                        width: 45%;
+
+                        &:first-child {
+                            margin-right: 45px;
+                        }
+
+                        .period-redaction-education-input {
+                            width: 100%;
+                            margin-left: 15px;
+                            border: none;
+                            border-bottom: 2px solid #000;
+                            outline: none;
+                        }
+                    }
+
+                    .period-label--date {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            top: 0%;
+                            right: 0%;
+                            content: url(../img/period_date.png);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-redaction-file-wrapper {
+        width: 28.65%;
+        min-height: 552px;
+
+        .modal-redaction-file-content {
+            .modal-redaction-file-title {
+                margin-bottom: 24px;
+            }
+
+            .modal-redaction-file-form {
+                margin-bottom: 64px;
+
+                .modal-redaction-file-textarea {
+                    margin-top: 38px;
+                }
+
+                .label-file {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 36px;
+                    border: 2px solid #000;
+
+                    .modal-input-file {
+                        width: 65%;
+                        border: none;
+                        border-right: 2px solid #000;
+                    }
+
+                    .modal-input-file::file-selector-button {
+                        width: 80px;
+                        height: 30px;
+                        background-color: transparent;
+                        border: 2px solid #000;
+                        border-radius: 7px;
+                    }
+
+                    .file-span {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-redaction-experience-wrapper {
+        width: 28.65%;
+        min-height: 487px;
+
+        .modal-redaction-experience-content {
+            .modal-redaction-experience-title {
+                margin-top: 13px;
+                margin-bottom: 40px;
+            }
+
+            .modal-redaction-experience-form {
+                margin-bottom: 47px;
+
+                .modal-redaction-experience-label {
+                    display: block;
+                    margin-bottom: 35px;
+                }
+
+                .modal-redaction-experience-text {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    text-align: left;
+                }
+
+                .modal-redaction-experience-period {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    .period-label {
+                        display: flex;
+                        width: 45%;
+                        font-size: 14px;
+
+                        &:first-child {
+                            margin-right: 45px;
+                        }
+
+                        .period-redaction-experience-input {
+                            width: 100%;
+                            margin-left: 15px;
+                            border: none;
+                            border-bottom: 2px solid #000;
+                            outline: none;
+                        }
+                    }
+
+                    .period-label--date {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            top: 0%;
+                            right: 0%;
+                            content: url(../img/period_date.png);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-redaction-encourage-wrapper {
+        width: 28.65%;
+        min-height: 552px;
+
+        .modal-redaction-encourage-content {
+            .modal-redaction-encourage-title {
+                margin-top: 24px;
+            }
+
+            .modal-redaction-encourage-form {
+                margin-top: 24px;
+                margin-bottom: 45px;
+
+                .modal-redaction-encourage-label--date {
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        top: 0%;
+                        right: 3%;
+                        content: url(../img/period_date.png);
+                    }
+                }
+
+                .modal-redaction-encourage-textarea {
+                    margin-top: 33px;
+                }
+            }
+        }
+    }
+}
+
+.modal-dismissal--active,
+.modal-dismissal--confirm--active,
+.modal-redaction-data--active,
+.modal-redaction-education--active,
+.modal-redaction-file--active,
+.modal-redaction-experience--active,
+.modal-redaction-encourage--active {
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    transition: 1.2s;
+}

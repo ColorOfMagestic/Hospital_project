@@ -1,7 +1,6 @@
 .main {
     .cards-ambulatory {
-        // display: none;
-        display: flex;
+        display: none;
         align-items: stretch;
         justify-content: space-between;
         padding-top: 23px;
@@ -135,107 +134,173 @@
                 }
 
                 .calendar {
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 15px;
-                    margin-left: 60px;
+                    float: left;
+                    width: 60%;
+                    margin-bottom: 20px;
+                    margin-left: 50px;
+                    background: #fff;
 
-                    .week-day-name,
                     .week {
-                        display: flex;
-                        flex-direction: row;
+                        float: left;
+                        width: 100%;
+                        margin: -1px 0 0 -1px;
+                        border: solid 1px #f2f2f2;
 
                         .day {
-                            width: 63px;
-                            height: 53px;
-                            border: 1px solid #000;
-
-                            &:not(:last-child) {
-                                margin-right: 5px;
-                            }
-
-                            .day-span {
-                                display: block;
-                                padding: 8px 5px;
-                                text-align: end;
-                            }
-
-                            .day-span--weekend {
-                                color: #bc3232;
-                            }
-                        }
-
-                        .noDayInMonth {
-                            color: #cacaca;
-                            border-color: #cacaca;
-                        }
-
-                        .day-name {
-                            height: 14px;
-                            text-align: center;
-                            text-transform: uppercase;
-                            border: none;
+                            position: relative;
+                            box-sizing: border-box;
+                            float: left;
+                            width: 14.285714285714%;
+                            height: 45px;
+                            padding-left: 8px;
+                            font-size: 10px;
+                            border-right: solid 1px #f2f2f2;
                         }
                     }
 
-                    .week-day-name {
-                        margin-bottom: 7px;
-                    }
-
-                    .week {
-                        margin-bottom: 5px;
-                    }
-
-                    .current-day_table-wrapper {
-                        position: relative;
-                        display: none;
-                        height: 63px;
-
-                        .current-day_table {
-                            position: absolute;
+                    .block_week {
+                        .week {
+                            float: left;
                             width: 100%;
-                            border-collapse: collapse;
-                            background-color: rgba(115, 137, 216, 0.23);
-                            border: 1px solid #000;
-                            opacity: 0;
-                            transition-delay: 1s;
-                            transition-duration: 0.8s;
+                            margin: -1px 0 0 -1px;
+                            border: solid 1px #f2f2f2;
 
-                            tr {
-                                td {
-                                    font-size: 12px;
-                                    line-height: 10px;
-                                    text-align: center;
-                                    border-bottom: 1px solid #000;
+                            .day {
+                                position: relative;
+                                box-sizing: border-box;
+                                float: left;
+                                width: 14.285714285714%;
+                                height: 45px;
+                                padding-left: 8px;
+                                font-size: 10px;
+                                border-right: solid 1px #f2f2f2;
+
+                                .couponsCount {
+                                    margin-top: 13px;
+                                    margin-bottom: 1rem;
+                                    font-size: 7px;
                                 }
+                            }
 
-                                .right {
-                                    width: 90px;
-                                    padding-top: 16px;
-                                    padding-right: 12px;
-                                    padding-bottom: 16px;
-                                    padding-left: 12px;
-                                    font-size: 16px;
-                                    text-align: center;
-                                    border-right: 1px solid #000;
-
-                                    span {
-                                        display: block;
-                                        margin-top: 5px;
-                                    }
+                            .notAvailable {
+                                .couponsCount {
+                                    color: #999;
                                 }
+                            }
+
+                            .tipso_style {
+                                cursor: pointer;
+                            }
+                        }
+
+                        .day_talons {
+                            position: relative;
+                            float: left;
+                            width: 100%;
+                            margin: -1px 0 0 -1px;
+                            overflow: hidden;
+                            background: #fff;
+                            border: solid 1px #f2f2f2;
+
+                            .day {
+                                position: absolute;
+                                -ms-box-sizing: border-box;
+                                -moz-box-sizing: border-box;
+                                -webkit-box-sizing: border-box;
+                                box-sizing: border-box;
+                                width: 20%;
+                                height: 100%;
+                                padding: 15px 12px;
+                                font-size: 20px;
+                                border-right: solid 1px #f2f2f2;
+
+                                span {
+                                    display: inline-block;
+                                    width: 95px;
+                                }
+                            }
+
+                            .order_talons {
+                                box-sizing: border-box;
+                                float: right;
+                                width: 100%;
+                                padding-left: 20%;
+                                margin-bottom: -1px;
+                                overflow: hidden;
+                                background: #fbfbfb;
                             }
                         }
                     }
+                }
+            }
+        }
+    }
 
-                    .current-day_table-wrapper--active {
-                        display: block;
+    .cards-ambulatory--active {
+        display: flex;
+    }
+}
 
-                        .current-day_table {
-                            opacity: 1;
-                            transition-delay: 1s;
-                            transition-duration: 0.8s;
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .main {
+        .cards-ambulatory {
+            .patient-card {
+                .patient-card_top {
+                    .search-card {
+                        width: 45%;
+                        font-size: 14px;
+                    }
+                }
+
+                .patient-card_form {
+                    margin-bottom: 10px;
+
+                    .patient-card_form_label {
+                        width: 43%;
+                        margin-bottom: 10px;
+
+                        &:not(:nth-child(even)) {
+                            margin-right: 70px;
                         }
+
+                        .patient-card_form_input {
+                            padding: 10px 5px 5px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .ambulatory_reception-card {
+                .ambulatory_reception-card_top {
+                    .reception-card_date {
+                        .reception-card_date-span {
+                            font-size: 20px;
+                            color: @date;
+                        }
+
+                        img {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+
+                .ambulatory_reception-card_content {
+                    .ambulatory_content-form {
+                        width: 40%;
+
+                        .ambulatory_content-input {
+                            height: 50px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .calendar {
+                        float: left;
+                        width: 60%;
+                        margin-bottom: 20px;
+                        margin-left: 15px;
+                        background: #fff;
                     }
                 }
             }

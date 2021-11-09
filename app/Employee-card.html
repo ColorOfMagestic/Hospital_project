@@ -569,7 +569,7 @@
 
     <!-- modals -->
     <!-- modal-dismissal -->
-    <section class="modal-dismissal">
+    <section class="modal-employee modal-dismissal">
         <div class="modal-wrapper modal-dismissal-wrapper">
             <div class="modal-content modal-dismissal-content">
                 <h3 class="modal-title modal-dismissal-title">Увольнение сотрудника</h3>
@@ -583,11 +583,12 @@
     </section>
     <!-- End modal-dismissal -->
     <!-- dismissal--confirm -->
-    <section class="modal-dismissal--confirm">
+    <section class="modal-employee modal-dismissal--confirm">
         <div class="modal-wrapper modal-dismissal--confirm-wrapper">
             <div class="modal-content modal-dismissal--confirm-content">
-                <h3 class="modal-title modal-dismissal--confirm-title">Увольнение сотрудника</h3>
-                <p class="modal-text modal-dismissal--confirm-text">Вы уверены что хотите уволить данного сотрудника?
+                <h3 class="modal-title modal-dismissal--confirm-title">Подтвердите удаление </h3>
+                <p class="modal-text modal-dismissal--confirm-text">Вы уверены что хотите удалить данные данные?
+                    Данное действие нельзя будет отменить
                 </p>
                 <div class="modal-buttons-choose modal-dismissal--confirm-buttons-choose">
                     <button class=" btn-choose btn-choose-cancel">Отмена</button>
@@ -598,23 +599,27 @@
     </section>
     <!-- End dismissal--confirm -->
     <!-- redaction-data -->
-    <section class="modal-redaction-data">
+    <section class="modal-employee modal-redaction-data">
         <div class="modal-wrapper modal-redaction-data-wrapper">
             <div class="modal-content modal-redaction-data-content">
-                <h3 class="modal-title modal-redaction-data-title">Редктирование данных</h3>
+                <h3 class="modal-title modal-redaction-data-title">Редактирование данных</h3>
                 <p class="modal-text modal-redaction-data-text">Тип контактных данных</p>
-                <div class="custom-select modal-redaction-data-custom-select">
-                    <select class="select" name="" id="">
-                        <option value="Телефон">Телефон</option>
-                        <option value="E-mail">E-mail</option>
-                        <option value="Адрес">Адрес</option>
-                        <option value="Прочее">Прочее</option>
-                    </select>
-                </div>
-                <p class="select-discription">*При написании телефонного кода вручную, код автоматически
-                    подставляется в выпадающий список</p>
-                <p class="modal-text modal-redaction-data-text">Контактных данных</p>
-                <input class="modal-input modal-redaction-data-text" type="text">
+                <form action="" class="modal-form modal-redaction-data-form">
+                    <div class="custom-select modal-redaction-data-custom-select">
+                        <select class="select" name="" id="">
+                            <option value="Телефон">Телефон</option>
+                            <option value="E-mail">E-mail</option>
+                            <option value="Адрес">Адрес</option>
+                            <option value="Прочее">Прочее</option>
+                        </select>
+                    </div>
+                    <p class="select-discription">*При написании телефонного кода вручную, код автоматически
+                        подставляется в выпадающий список</p>
+                    <p class="modal-text modal-redaction-data-form-text">Контактных данных</p>
+                    <label class="modal-label modal-redaction-data-label">
+                        <input class="modal-input modal-redaction-data-input-text" type="text">
+                    </label>
+                </form>
                 <div class="modal-buttons-choose modal-redaction-data-buttons-choose">
                     <button class=" btn-choose btn-choose-cancel">Отмена</button>
                     <button class=" btn-choose btn-choose-ok">Сохранить</button>
@@ -624,37 +629,41 @@
     </section>
     <!-- End redaction-data -->
     <!-- redaction-education -->
-    <section class="modal-redaction-education">
+    <section class="modal-employee modal-redaction-education">
         <div class="modal-wrapper modal-redaction-education-wrapper">
             <div class="modal-content modal-redaction-education-content">
-                <h3 class="modal-title modal-redaction-education-title">Редктирование данных</h3>
-                <div class="custom-select modal-redaction-education-custom-select">
-                    <select class="select" name="" id="">
-                        <option value="">Тип</option>
-                        <option value="Курсы">Курсы</option>
-                        <option value="Университет">Университет</option>
-                        <option value="Колледж">Колледж</option>
-                        <option value="Прoчее">Прoчее</option>
-                    </select>
-                </div>
-                <textarea class="modal-redaction-education-textarea" placeholder="Название заведения"></textarea>
-                <div class="custom-select modal-redaction-education-custom-select">
-                    <select class="select" name="" id="">
-                        <option value="">Специализация</option>
-                        <option value="Педиатрия">Педиатрия</option>
-                        <option value="Хирургия">Хирургия</option>
-                        <option value="Гастроэнтерология">Гастроэнтерология</option>
-                    </select>
-                </div>
-                <p class="modal-text modal-redaction-education-text">Период обучения</p>
-                <div class="modal-redaction-education-period">
-                    <label class="modal-label modal-redaction-education-label icon-cldr">
-                        <input class="modal-input modal-redaction-education-text" type="text">
+                <h3 class="modal-title modal-redaction-education-title">Редактирование данных</h3>
+                <form action="" class="modal-form modal-redaction-education-form">
+                    <div class="custom-select modal-redaction-education-custom-select">
+                        <select class="select" name="" id="">
+                            <option value="">Тип</option>
+                            <option value="Курсы">Курсы</option>
+                            <option value="Университет">Университет</option>
+                            <option value="Колледж">Колледж</option>
+                            <option value="Прoчее">Прoчее</option>
+                        </select>
+                    </div>
+                    <textarea class="modal-textarea modal-redaction-education-textarea"
+                        placeholder="Название заведения"></textarea>
+                    <div class="custom-select modal-redaction-education-custom-select">
+                        <select class="select" name="" id="">
+                            <option value="">Специализация</option>
+                            <option value="Педиатрия">Педиатрия</option>
+                            <option value="Хирургия">Хирургия</option>
+                            <option value="Гастроэнтерология">Гастроэнтерология</option>
+                        </select>
+                    </div>
+                    <p class="modal-text modal-redaction-education-text">Период обучения</p>
+                    <label class="modal-redaction-education-period">
+                        <label class=" period-label period-label--date">c
+
+                            <input class="period-redaction-education-input" type="text">
+                        </label>
+                        <label class="period-label period-label--date"> по
+                            <input class="period-redaction-education-input" type="text">
+                        </label>
                     </label>
-                    <label class="modal-label modal-redaction-education-label icon-cldr">
-                        <input class="modal-input modal-redaction-education-text" type="text">
-                    </label>
-                </div>
+                </form>
                 <div class="modal-buttons-choose modal-redaction-education-buttons-choose">
                     <button class=" btn-choose btn-choose-cancel">Отмена</button>
                     <button class=" btn-choose btn-choose-ok">Сохранить</button>
@@ -664,15 +673,20 @@
     </section>
     <!-- End redaction-education -->
     <!-- redaction-file -->
-    <section class="modal-redaction-file">
+    <section class="modal-employee modal-redaction-file">
         <div class="modal-wrapper modal-redaction-file-wrapper">
             <div class="modal-content modal-redaction-file-content">
-                <h3 class="modal-title modal-redaction-file-title">Редктирование данных</h3>
-                <label class="modal-label modal-redaction-file-label">
-                    <input class="modal-input modal-redaction-file-text" type="text" placeholder="Название">
-                </label>
-                <textarea class="modal-redaction-file-textarea" placeholder="Описание"></textarea>
-                <!-- <input type="file" name="" id=""> -->
+                <h3 class="modal-title modal-redaction-file-title">Редактирование данных</h3>
+                <form action="" class="modal-form modal-redaction-file-form">
+                    <label class="modal-label modal-redaction-file-label">
+                        <input class="modal-input modal-redaction-file-text" type="text" placeholder="Название">
+                    </label>
+                    <textarea class="modal-textarea modal-redaction-file-textarea" placeholder="Описание"></textarea>
+                    <label class="modal-label modal-redaction-file-label label-file">
+                        <input class="modal-input modal-input-file" type="file">
+                        <span class="file-span">Загрузить файл</span>
+                    </label>
+                </form>
                 <div class="modal-buttons-choose modal-redaction-file-buttons-choose">
                     <button class=" btn-choose btn-choose-cancel">Отмена</button>
                     <button class=" btn-choose btn-choose-ok">Сохранить</button>
@@ -682,28 +696,34 @@
     </section>
     <!-- End redaction-file -->
     <!-- redaction-experience -->
-    <section class="modal-redaction-experience">
+    <section class="modal-employee modal-redaction-experience">
         <div class="modal-wrapper modal-redaction-experience-wrapper">
             <div class="modal-content modal-redaction-experience-content">
                 <h3 class="modal-title modal-redaction-experience-title">Редктирование данных</h3>
-                <label class="modal-label modal-redaction-experience-label">
-                    <input class="modal-input modal-redaction-experience-text" type="text" placeholder="Название">
-                </label>
-                <label class="modal-label modal-redaction-experience-label">
-                    <input class="modal-input modal-redaction-experience-text" type="text" placeholder="Город ">
-                </label>
-                <label class="modal-label modal-redaction-experience-label">
-                    <input class="modal-input modal-redaction-experience-text" type="text" placeholder="Должность">
-                </label>
-                <p class="modal-text modal-redaction-experience-text">Период обучения</p>
-                <div class="modal-redaction-experience-period">
-                    <label class="modal-label modal-redaction-experience-label icon-cldr">
-                        <input class="modal-input modal-redaction-experience-text" type="text">
+                <form action="" class="modal-form modal-redaction-experience-form">
+                    <label class="modal-label modal-redaction-experience-label">
+                        <input class="modal-input modal-redaction-experience-text" type="text" placeholder="Название">
                     </label>
-                    <label class="modal-label modal-redaction-experience-label icon-cldr">
-                        <input class="modal-input modal-redaction-experience-text" type="text">
+                    <label class="modal-label modal-redaction-experience-label">
+                        <input class="modal-input modal-redaction-experience-text" type="text" placeholder="Город ">
                     </label>
-                </div>
+                    <label class="modal-label modal-redaction-experience-label">
+                        <input class="modal-input modal-redaction-experience-text" type="text" placeholder="Должность">
+                    </label>
+                    <p class="modal-text modal-redaction-experience-text">Период работы</p>
+                    <label class="modal-redaction-experience-period">
+                        <label class=" period-label period-label--date">c
+
+                            <input class="period-redaction-experience-input" type="text">
+                        </label>
+                        <label class="period-label period-label--date"> по
+                            <input class="period-redaction-experience-input" type="text">
+                        </label>
+                    </label>
+
+                    <!-- period -->
+                </form>
+
                 <div class="modal-buttons-choose modal-redaction-experience-buttons-choose">
                     <button class=" btn-choose btn-choose-cancel">Отмена</button>
                     <button class=" btn-choose btn-choose-ok">Сохранить</button>
@@ -713,25 +733,29 @@
     </section>
     <!-- End redaction-experience -->
     <!-- redaction-encourage -->
-    <section class="modal-redaction-encourage">
+    <section class="modal-employee modal-redaction-encourage">
         <div class="modal-wrapper modal-redaction-encourage-wrapper">
             <div class="modal-content modal-redaction-encourage-content">
-                <h3 class="modal-title modal-redaction-encourage-title">Редктирование данных</h3>
-                <div class="custom-select modal-redaction-encourage-custom-select">
-                    <select class="select" name="" id="">
-                        <option value="">Тип</option>
-                        <option value="Поощерение">Поощерение</option>
-                        <option value="Взысказывание">Взысказывание</option>
-                    </select>
-                </div>
-                <textarea class="modal-redaction-encourage-textarea" placeholder="Причина"></textarea>
-                <label class="modal-label modal-redaction-encourage-label">
-                    <input class="modal-input modal-redaction-encourage-text" type="text" placeholder="Место работы">
-                </label>
-                <label class="modal-label modal-redaction-encourage-label icon-cldr">
-                    <input class="modal-input modal-redaction-encourage-text" type="text" placeholder="Дата">
-                </label>
+                <h3 class="modal-title modal-redaction-encourage-title">Редактирование данных</h3>
+                <form action="" class="modal-form modal-redaction-encourage-form">
+                    <div class="custom-select modal-redaction-encourage-custom-select">
+                        <select class="select" name="" id="">
+                            <option value="">Тип</option>
+                            <option value="Поощерение">Поощерение</option>
+                            <option value="Взысказывание">Взысказывание</option>
+                        </select>
+                    </div>
+                    <textarea class="modal-textarea modal-redaction-encourage-textarea"
+                        placeholder="Причина"></textarea>
+                    <label class="modal-label modal-redaction-encourage-label">
+                        <input class="modal-input modal-redaction-encourage-text" type="text"
+                            placeholder="Место работы">
+                    </label>
+                    <label class="modal-label modal-redaction-encourage-label modal-redaction-encourage-label--date">
+                        <input class="modal-input modal-redaction-encourage-text" type="text" placeholder="Дата">
+                    </label>
 
+                </form>
                 <div class="modal-buttons-choose modal-redaction-encourage-buttons-choose">
                     <button class=" btn-choose btn-choose-cancel">Отмена</button>
                     <button class=" btn-choose btn-choose-ok">Сохранить</button>

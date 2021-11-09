@@ -1,4 +1,4 @@
-.modal {
+.modal-registry {
     position: absolute;
     top: 0;
     display: flex;
@@ -13,8 +13,7 @@
 
     .modal-wrapper {
         position: relative;
-        width: 1582px;
-        min-height: 814px;
+        width: 82.4%;
         padding: 20px 26px;
         background-color: #fff;
         border: 1px solid #343434;
@@ -28,7 +27,7 @@
                 margin-bottom: 8px;
 
                 .modal_form_label {
-                    width: 340px;
+                    width: 23%;
 
                     &:not(:nth-child(4n+4)) {
                         margin-right: 55px;
@@ -227,7 +226,34 @@
     }
 }
 
-.modal--active {
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .modal-registry {
+        .modal-wrapper {
+            .modal-content {
+                .modal_form {
+                    .modal_form_label {
+                        width: 21%;
+
+                        &:not(:nth-child(4n+4)) {
+                            margin-right: 50px;
+                        }
+
+                        .modal_form_input {
+                            padding: 20px 5px 6px;
+                        }
+                    }
+                }
+
+                .modal-table {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.modal-registry--active {
+    z-index: 5;
     overflow: hidden;
     visibility: visible;
     opacity: 1;

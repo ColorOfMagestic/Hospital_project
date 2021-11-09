@@ -1,16 +1,16 @@
 .header {
-    height: 107px;
+    width: 100%;
     color: #fff;
     background-color: @headerBG;
 
     .header-wrapper {
         display: flex;
         justify-content: center;
+        padding: 10px 0 10px;
 
         .logo {
             display: flex;
             align-items: center;
-            margin-top: 40px;
             margin-right: auto;
 
             .logo_name {
@@ -68,6 +68,11 @@
                 background-image: url(../img/enter.png);
             }
 
+            .logo-btn_filter {
+                margin-left: 28px;
+                background-image: url(../img/filter.png);
+            }
+
             .logo-btn_add-emp {
                 background-image: url(../img/plus.png);
             }
@@ -78,7 +83,8 @@
         }
 
         .page-title {
-            margin-top: 49px;
+            display: flex;
+            align-items: center;
             font-size: 32px;
             font-weight: 600;
         }
@@ -86,7 +92,6 @@
         .user {
             display: flex;
             align-items: center;
-            margin-top: 20px;
             margin-left: auto;
 
             .user_name {

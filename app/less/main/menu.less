@@ -3,8 +3,9 @@
 
     .menu {
         position: absolute;
+        z-index: 10;
         width: 20.85%;
-        height: 100vh;
+        height: calc(100vh - 61.5px);
         padding: 50px 0;
         padding-left: 56px;
         background-color: #7085cf;
@@ -21,14 +22,13 @@
 
                 .menu_list-item_link {
                     font-size: 26px;
-                    font-weight: 500px;
+                    font-weight: 500;
                     color: #fff;
                     text-decoration: none;
                 }
 
                 &:last-child {
                     margin-top: auto;
-                    margin-bottom: 0;
                 }
             }
         }

@@ -3,7 +3,6 @@
         width: 100%;
         padding: 30px;
         margin-top: 30px;
-        margin-bottom: 20px;
         border-radius: 7px;
         box-shadow: 3px 4px 18px rgba(0, 0, 0, 0.25);
 
@@ -64,6 +63,40 @@
 
                 &:active {
                     transform: translate(2px, 2px);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .main {
+        .info {
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            .form-info {
+                .form-info-label {
+                    width: 19.28%;
+                    margin-bottom: 0;
+
+                    &:not(:nth-child(4n+4)) {
+                        margin-right: 80px;
+                    }
+
+                    .form-info-input {
+                        padding: 10px 5px 5px;
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+                }
+
+                .info_btn {
+                    font-size: 18px;
+
+                    &:active {
+                        transform: translate(2px, 2px);
+                    }
                 }
             }
         }
