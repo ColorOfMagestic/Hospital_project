@@ -1,30 +1,55 @@
-const toggler = document.querySelector('.toggler');
-const menu = document.querySelector('.menu');
 const cardsHistory = document.querySelector('.cards-history');
-const modalRegistry = document.querySelector('.modal-registry');
 const btnSearchCards = document.querySelectorAll('.search-card');
-const modalRegistryCancel = document.querySelector('#modal-registry-cancel');
+
+// Toggler
+
+function toggler() {
+    const toggler = document.querySelector('.toggler');
+
+    const menu = document.querySelector('.menu');
+
+    toggler.addEventListener('change', function () {
+        if (toggler.checked) {
+            menu.classList.add('menu--active');
+        }
+        else {
+            menu.classList.remove('menu--active');
+        }
+    });
+    
+} 
+toggler();
 
 
-toggler.addEventListener('change', function () {
-    if (toggler.checked) {
-        menu.classList.add('menu--active');
-    }
-    else {
-        menu.classList.remove('menu--active');
-    }
-});
 
+// SearchCards
+const modalRegistry = document.querySelector('.modal-registry');
 
-btnSearchCards.forEach(el => {
+// Modal registry
+
+function SearchCards() {
+
+    btnSearchCards.forEach(el => {
     el.addEventListener('click', function () {
         modalRegistry.classList.add('modal-registry--active')
     });
 });
+}
+SearchCards();
+// delete 
 
-modalRegistryCancel.addEventListener('click', function () {
-    modalRegistry.classList.remove('modal-registry--active');
-});
+function delClass() {
+    const btnsChooseCancel = document.querySelectorAll('.btn-choose-cancel');
+
+    btnsChooseCancel.forEach(el=> {
+        el.addEventListener('click', function () {
+            modalRegistry.classList.remove('modal-registry--active');
+        });
+    })
+};
+
+delClass();
+
 
 
 
