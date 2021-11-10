@@ -8,33 +8,18 @@ const modalRedactionExperience = document.querySelector('.modal-redaction-experi
 const modalRedactionEncourage = document.querySelector('.modal-redaction-encourage');
 const btnsChooseCancel = document.querySelectorAll('.btn-choose-cancel');
 const addMenuBtn = document.querySelectorAll('.add-menu_list_item_btn');
-
-const addMenuBtnContact = document.querySelector('.add-menu_list_item_btn--contact');
-const addMenuBtnEducation = document.querySelector('.add-menu_list_item_btn--education');
-const addMenuBtnGeneral = document.querySelector('.add-menu_list_item_btn--general');
-const addMenuBtnExperience = document.querySelector('.add-menu_list_item_btn--experience');
-const addMenuBtnStimulation = document.querySelector('.add-menu_list_item_btn--stimulation');
 const addMenu = document.querySelector('.add-menu');
 
 
-
-function addModal(btn,cls,cls2) {
-    btn.addEventListener('click', function() {
-        addMenu.classList.remove('add-menu--active');
-        cls.classList.add(`${cls2}--active`);
-        
-    })
-    
-}
-
-addModal(addMenuBtnContact,modalRedactionData,'modal-redaction-data');
-addModal(addMenuBtnEducation,modalRedactionEducation,'modal-redaction-education');
+const addMenuBtnContact = document.querySelector('.add-menu_list_item_btn--contact');
+const addMenuBtnEducation = document.querySelector('.add-menu_list_item_btn--education');
+const addMenuBtnDocs = document.querySelector('.add-menu_list_item_btn--docs');
+const addMenuBtnExperience = document.querySelector('.add-menu_list_item_btn--experience');
+const addMenuBtnStimulation = document.querySelector('.add-menu_list_item_btn--stimulation');
 
 
 
-
-
-
+// Toggler
 
 function toggler() {
     const toggler = document.querySelector('.toggler');
@@ -57,7 +42,6 @@ toggler();
 function dismissal() {
     const btnEnter = document.querySelector('.logo-btn_enter');
 
-
     btnEnter.addEventListener('click', function () {
         modalDismissal.classList.add('modal-dismissal--active');
     });
@@ -66,8 +50,8 @@ function dismissal() {
 dismissal();
 
 // addProperty
-
 function addProperty() {
+
     const btnAddEmp = document.querySelector('.logo-btn_add-emp');
     btnAddEmp.addEventListener('click', function () {
         addMenu.classList.toggle('add-menu--active');
@@ -76,14 +60,39 @@ function addProperty() {
 
 addProperty();
 
-// delete 
 
+// Add modal
+function addAllModal() {
+    function addModal(btn,cls,cls2) {
+        btn.addEventListener('click', function() {
+            addMenu.classList.remove('add-menu--active');
+            cls.classList.add(`${cls2}--active`);
+        })
+        
+    }
+    addModal(addMenuBtnContact,modalRedactionData,'modal-redaction-data');
+    addModal(addMenuBtnEducation,modalRedactionEducation,'modal-redaction-education');
+    addModal(addMenuBtnDocs,modalRedactionFile,'modal-redaction-file');
+    addModal(addMenuBtnExperience,modalRedactionExperience,'modal-redaction-experience');
+    addModal(addMenuBtnStimulation,modalRedactionEncourage,'modal-redaction-encourage');
+}
+
+addAllModal();
+
+
+// Close modal
 function delClass() {
     btnsChooseCancel.forEach(el=> {
         el.addEventListener('click', function () {
-            modalDismissal.classList.remove('modal-dismissal--active');
-            modalRedactionData.classList.remove('modal-redaction-data--active');
-            modalRedactionEducation.classList.remove('modal-redaction-education--active');
+            function removeClass(name, cls) {
+                name.classList.remove(`${cls}--active`);
+            }
+            removeClass(modalDismissal,'modal-dismissal');
+            removeClass(modalRedactionData,'modal-redaction-data');
+            removeClass(modalRedactionEducation,'modal-redaction-education');
+            removeClass(modalRedactionExperience,'modal-redaction-experience');
+            removeClass(modalRedactionEncourage,'modal-redaction-encourage');
+            removeClass(modalRedactionFile,'modal-redaction-file');
         });
     })
 };

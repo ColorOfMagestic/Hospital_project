@@ -6,7 +6,7 @@ const csso = require('gulp-csso');
 const autoprefixer = require("autoprefixer");
 const rename = require("gulp-rename");
 const browserSync = require('browser-sync').create();
-const concat = require('gulp-concat');
+// const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -60,9 +60,9 @@ function browsersync() {
 
 function scripts() {
   return src([
-    'app/js/main.js'
+    'app/js/*.js'
   ])
-    .pipe(concat('main.min.js'))
+    // .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
@@ -123,7 +123,7 @@ function build() {
   return src([
     'app/css/style.min.css',
     'app/fonts/**/*',
-    'app/js/main.min.js',
+    'app/js/*.js',
     'app/*.html'
   ], { base: 'app' })
     .pipe(dest('dist'))
